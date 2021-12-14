@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+
+<head>
+    <title>Soil Data | MEITy</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="icon" href="./img/mmmut.png" type="image/jpg" >
+
+</head>  
+
+
+<body style="background-color: #def7e0;">
+    <div class="loading" delay-hide="1000"></div>
+
+<nav class="navbar navbar-light bg-primary shadow" >
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="./img/mmmut.png" alt="" width="40" height="40" class="d-inline-block align-text-top">
+      Soil Data | MEITy MMMUT, Gorakhpur
+    </a>
+  </div>
+</nav>
+    <div class="container">
+        
+        <ul class="cards ">
+            <li>
+              <a href="" class="card" style="border-radius: 10%;">
+                <img src="./img/soilTemp.jpg" class="card__image" alt="" />
+                <div class="card__overlay">
+                  <div class="card__header">
+                    <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                    <img class="card__thumb" src="./img/therm.png" alt="" />
+                    <div class="card__header-text">
+                      <h3 class="card__title" id="temperature">32 &#8451;</h3>            
+                      <span class="card__status">Temperature Of Soil</span>
+                    </div>
+                  </div>
+                  <p class="card__description">Temperature of soil measured using DHT22 sensor which was stored in firebase .</p>
+                </div>
+              </a>      
+            </li>
+            <li>
+              <a href="" class="card" style="border-radius: 10%;">
+                <img src="./img/humidSoil.jpg" class="card__image" alt="" />
+                <div class="card__overlay">        
+                  <div class="card__header">
+                    <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                    <img class="card__thumb" src="./img/humidity.jpg" alt="" />
+                    <div class="card__header-text">
+                      <h3 class="card__title" id="humidity">10 g/kg</h3>
+                      <span class="card__status">Humidity Of Soil</span>
+                    </div>
+                  </div>
+                  <p class="card__description">Humidity of soil measured using DHT22 sensor which was stored in firebase .</p>
+                </div>
+              </a>
+            </li>
+
+
+
+
+            <li>
+              <a href="" class="card" style="border-radius: 10%;">
+                <img src="./img/envTemp.jpg" class="card__image" alt="" />
+                <div class="card__overlay">
+                  <div class="card__header">
+                    <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                    <img class="card__thumb" src="./img/therm.png" alt="" />
+                    <div class="card__header-text">
+                      <h3 class="card__title" id="toenv">32 &#8451;</h3>            
+                      <span class="card__status">Temperature Of Environment</span>
+                    </div>
+                  </div>
+                  <p class="card__description">Temperature of environment measured using DHT22 sensor which was stored in firebase .</p>
+                </div>
+              </a>      
+            </li>
+
+            <li>
+              <a href="" class="card" style="border-radius: 10%;">
+                <img src="./img/envHumid.jpg" class="card__image" alt="" />
+                <div class="card__overlay">        
+                  <div class="card__header">
+                    <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                    <img class="card__thumb" src="./img/humidity.jpg" alt="" />
+                    <div class="card__header-text">
+                      <h3 class="card__title" id="hoenv">10 g/kg</h3>
+                      <span class="card__status">Humidity Of Environment</span>
+                    </div>
+                  </div>
+                  <p class="card__description">Humidity of environment measured using DHT22 sensor which was stored in firebase .</p>
+                </div>
+              </a>
+            </li>
+
+
+
+            <li>
+              <a href="" class="card" style="border-radius: 10%;">
+                <img src="./img/n.jpg" class="card__image" alt="" />
+                <div class="card__overlay">        
+                  <div class="card__header">
+                    <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                    <img class="card__thumb" src="./img/npk.jpg" alt="" />
+                    <div class="card__header-text">
+                      <h3 class="card__title" id="n">10 g/kg</h3>
+                      <span class="card__status">Nitrogen Content</span>
+                    </div>
+                  </div>
+                  <p class="card__description">Nitrogen content of Soil measured using DHT22 sensor which was stored in firebase .</p>
+                </div>
+              </a>
+            </li>            
+            <li>
+              <a href="" class="card" style="border-radius: 10%;">
+                <img src="./img/p.jpg" class="card__image" alt="" />
+                <div class="card__overlay">        
+                  <div class="card__header">
+                    <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                    <img class="card__thumb" src="./img/npk.jpg" alt="" />
+                    <div class="card__header-text">
+                      <h3 class="card__title" id="p">10 g/kg</h3>
+                      <span class="card__status">Phosphorous Content</span>
+                    </div>
+                  </div>
+                  <p class="card__description">Phosphorous content of Soil measured using DHT22 sensor which was stored in firebase .</p>
+                </div>
+              </a>
+            </li>            
+            <li>
+              <a href="" class="card" style="border-radius: 10%;">
+                <img src="./img/k.jpg" class="card__image" alt="" />
+                <div class="card__overlay">        
+                  <div class="card__header">
+                    <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                    <img class="card__thumb" src="./img/npk.jpg" alt="" />
+                    <div class="card__header-text">
+                      <h3 class="card__title" id="k">10 g/kg</h3>
+                      <span class="card__status">Pottasium Content</span>
+                    </div>
+                  </div>
+                  <p class="card__description">Pottasium content of Soil measured using DHT22 sensor which was stored in firebase .</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        
+    </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+      <script>
+          $(document).ready(function(){
+                var loading = $(".loading");
+                 loading.delay(loading.attr("delay-hide")).slideUp();
+            });
+      </script>
+      
+      <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics.js";
+        import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyBqcRNpVYFF2OY3nBkop4LihKSFtAvcVAk",
+          authDomain: "iotdata-15d60.firebaseapp.com",
+          databaseURL: "https://iotdata-15d60-default-rtdb.firebaseio.com",
+          projectId: "iotdata-15d60",
+          storageBucket: "iotdata-15d60.appspot.com",
+          messagingSenderId: "381589075643",
+          appId: "1:381589075643:web:83239d3cb583db128a1b9e",
+          measurementId: "G-QF736YKMSR"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const db = getDatabase();
+const starCountRef = ref(db, 'data/');
+onValue(starCountRef, (snapshot) => {
+  const data = snapshot.val();
+  document.getElementById("temperature").innerHTML=data['temperature']+" &#8451;";
+  document.getElementById("humidity").innerHTML=data['humidity']+" g/Kg";
+  document.getElementById("toenv").innerHTML=data['tOfSoil']+" &#8451;";
+  document.getElementById("humidity").innerHTML=data['hOfSoil']+" g/Kg";
+  document.getElementById("n").innerHTML=data['n']+" mg/Kg";
+  document.getElementById("p").innerHTML=data['p']+" mg/Kg";
+  document.getElementById("k").innerHTML=data['k']+" mg/Kg";
+});
+      </script>
+</body>
+</html>
