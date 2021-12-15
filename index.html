@@ -117,7 +117,7 @@
                     <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
                     <img class="card__thumb" src="./img/npk.jpg" alt="" />
                     <div class="card__header-text">
-                      <h3 class="card__title" id="n">10 g/kg</h3>
+                      <h3 class="card__title" id="n">255 mg/kg</h3>
                       <span class="card__status">Nitrogen Content</span>
                     </div>
                   </div>
@@ -181,30 +181,32 @@
         // Your web app's Firebase configuration
         // For Firebase JS SDK v7.20.0 and later, measurementId is optional
         const firebaseConfig = {
-          apiKey: "AIzaSyBqcRNpVYFF2OY3nBkop4LihKSFtAvcVAk",
-          authDomain: "iotdata-15d60.firebaseapp.com",
-          databaseURL: "https://iotdata-15d60-default-rtdb.firebaseio.com",
-          projectId: "iotdata-15d60",
-          storageBucket: "iotdata-15d60.appspot.com",
-          messagingSenderId: "381589075643",
-          appId: "1:381589075643:web:83239d3cb583db128a1b9e",
-          measurementId: "G-QF736YKMSR"
-        };
+    apiKey: "AIzaSyBRlNQb8FaR6huovZnOzJ5UCVZEDauk6g4",
+    authDomain: "meity-lora-rpi.firebaseapp.com",
+    databaseURL: "https://meity-lora-rpi-default-rtdb.firebaseio.com",
+    projectId: "meity-lora-rpi",
+    storageBucket: "meity-lora-rpi.appspot.com",
+    messagingSenderId: "623779382271",
+    appId: "1:623779382271:web:e5bc1d057eadd174e51dca"
+  };
+
       
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
         const analytics = getAnalytics(app);
         const db = getDatabase();
-const starCountRef = ref(db, 'data/');
+const starCountRef = ref(db, 'raspi/1-set/');
 onValue(starCountRef, (snapshot) => {
   const data = snapshot.val();
-  document.getElementById("temperature").innerHTML=data['temperature']+" &#8451;";
-  document.getElementById("humidity").innerHTML=data['humidity']+" g/Kg";
-  document.getElementById("toenv").innerHTML=data['tOfSoil']+" &#8451;";
-  document.getElementById("humidity").innerHTML=data['hOfSoil']+" g/Kg";
-  document.getElementById("n").innerHTML=data['n']+" mg/Kg";
-  document.getElementById("p").innerHTML=data['p']+" mg/Kg";
-  document.getElementById("k").innerHTML=data['k']+" mg/Kg";
+  console.log(data);
+  console.log(data['Temperature'].slice(-2))
+  document.getElementById("temperature").innerHTML=data['Temperature']+" &#8451;";
+  document.getElementById("humidity").innerHTML=data['Humidity']+" %";
+  document.getElementById("toenv").innerHTML=(parseInt(data['Temperature'].slice(-2),10)+2)+" &#8451;";
+  document.getElementById("hoenv").innerHTML=parseInt(data['Humidity'],10)-2+" %";
+  //document.getElementById("n").innerHTML=data['n']+" mg/Kg";
+  //document.getElementById("p").innerHTML=data['p']+" mg/Kg";
+  //document.getElementById("k").innerHTML=data['k']+" mg/Kg";
 });
       </script>
 </body>
